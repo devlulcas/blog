@@ -1,0 +1,16 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"aaron-bond.better-comments",
+		"editorconfig.editorconfig",
+		"eamodio.gitlens",
+		"bierner.markdown-preview-github-styles",
+		"esbenp.prettier-vscode",
+		"styled-components.vscode-styled-components",
+		"redhat.vscode-xml",
+		"jock.svg",
+		"streetsidesoftware.code-spell-checker",
+		"streetsidesoftware.code-spell-checker-portuguese-brazilian"
+	]
+}
