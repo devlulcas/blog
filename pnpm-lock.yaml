@@ -6,6 +6,7 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   glob: ^8.0.3
   gray-matter: ^4.0.3
+  highlight.js: ^11.5.1
   next: 12.1.6
   next-mdx-remote: ^4.0.3
   prettier: ^2.6.2
@@ -19,6 +20,7 @@ specifiers:
 dependencies:
   glob: 8.0.3
   gray-matter: 4.0.3
+  highlight.js: 11.5.1
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   next-mdx-remote: 4.0.3_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
