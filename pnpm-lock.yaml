@@ -9,6 +9,7 @@ specifiers:
   highlight.js: ^11.5.1
   next: 12.1.6
   next-mdx-remote: ^4.0.3
+  next-sitemap: ^2.5.20
   prettier: ^2.6.2
   react: 18.1.0
   react-dom: 18.1.0
@@ -23,6 +24,7 @@ dependencies:
   highlight.js: 11.5.1
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   next-mdx-remote: 4.0.3_ef5jwxihqo6n7gxfmzogljlgcm
+  next-sitemap: 2.5.20_next@12.1.6
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   rehype-autolink-headings: 6.1.1
@@ -167,6 +169,10 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@corex/deepmerge/2.6.148:
+    resolution: {integrity: sha512-6QMz0/2h5C3ua51iAnXMPWFbb1QOU1UvSM4bKBw5mzdT+WtLgjbETBBIQZ+Sh9WvEcGwlAt/DEdRpIC3XlDBMA==}
     dev: false
 
   /@emotion/is-prop-valid/1.1.2:
@@ -2306,7 +2312,6 @@ packages:
 
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
-    dev: true
 
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -2349,6 +2354,18 @@ packages:
       vfile-matter: 3.0.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /next-sitemap/2.5.20_next@12.1.6:
+    resolution: {integrity: sha512-Qbm4N2WGA6VHemFN0C9PNWQav9RKwMEbVrNgVvDQhG0sDBmNBgKii54WklOjCvVJVHgQPgtXLBhlNaJGS+RVQA==}
+    engines: {node: '>=14.18'}
+    hasBin: true
+    peerDependencies:
+      next: '*'
+    dependencies:
+      '@corex/deepmerge': 2.6.148
+      minimist: 1.2.6
+      next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
     dev: false
 
   /next/12.1.6_ef5jwxihqo6n7gxfmzogljlgcm:
