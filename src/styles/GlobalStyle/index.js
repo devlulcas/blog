@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
   
+  body {
+    min-height: 100vh;
+  }
+
   :root {
     font-size: 62.5%;
     --primary-light: #f0f0f0;
