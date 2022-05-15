@@ -23,7 +23,6 @@ export async function getStaticProps() {
 	const posts = getAllPosts();
 	const postsToShow = posts.slice(0, 9);
 	const postsMeta = postsToShow.map((post) => post.meta);
-	console.log(postsMeta);
 
 	return {
 		props: { postsMeta },
