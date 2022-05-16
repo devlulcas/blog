@@ -1,7 +1,10 @@
 import { GlobalStyle } from "../styles/GlobalStyle";
 import "../styles/highlight.css";
 
-function MyApp({ Component, pageProps }) {
+/**
+ * Template aplicado a todas as páginas nessa pasta
+ */
+export default function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<GlobalStyle />
@@ -9,5 +12,3 @@ function MyApp({ Component, pageProps }) {
 		</>
 	);
 }
-
-export default MyApp;

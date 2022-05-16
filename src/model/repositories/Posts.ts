@@ -7,6 +7,12 @@ import { Post } from "../entity/Post";
 // Caminho para os posts
 const POSTS_PATH = path.join(process.cwd(), "/posts");
 
+/**
+ * Obtém um array de nomes dos arquivos (posts) para usar como rota
+ *
+ * >>> projeto/posts/algo_legal.mdx
+ * >>> ["algo_legal"]
+ */
 function getSlugs() {
 	const paths: string[] = sync(`${POSTS_PATH}/*.mdx`);
 
@@ -18,6 +24,9 @@ function getSlugs() {
 	});
 }
 
+/**
+ * Busca todos os posts disponíveis ordenados por data
+ */
 function getAllPosts() {
 	const postsSlugs = getSlugs();
 
@@ -33,11 +42,15 @@ function getAllPosts() {
 	return posts;
 }
 
+/**
+ * Obtém um post especifico com base no nome (slug)
+ */
 function getPostFromSlug(slug: string): Post {
 	const postsPaths = path.join(POSTS_PATH, `${slug}.mdx`);
 
 	const source = fs.readFileSync(postsPaths);
 
+	// Processa o buffer com gray-matter separando os metadados
 	const { content, data } = matter(source);
 
 	return {

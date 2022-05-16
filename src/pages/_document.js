@@ -1,7 +1,9 @@
 import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-// Faz com que o styled componentes gere o CSS no servidor
+/**
+ * Faz com que o styled componentes gere o CSS no servidor.
+ */
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx) {
 		const sheet = new ServerStyleSheet();
@@ -10,7 +12,8 @@ export default class MyDocument extends Document {
 		try {
 			ctx.renderPage = () =>
 				originalRenderPage({
-					enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+					enhanceApp: (App) => (props) =>
+						sheet.collectStyles(<App {...props} />),
 				});
 
 			const initialProps = await Document.getInitialProps(ctx);

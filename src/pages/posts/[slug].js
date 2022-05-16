@@ -8,16 +8,20 @@ import rehypeSlug from "rehype-slug";
 import rehypeHighlight from "rehype-highlight";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import elixir from "highlight.js/lib/languages/elixir";
+import { Default } from "../../components/layouts/Default";
 
+/**
+ * Página individual do post do blog
+ */
 export default function PostPage({ post }) {
 	return (
-		<>
+		<Default>
 			<Head>
 				<title>{post.meta.title}</title>
 			</Head>
 			<h1>{post.meta.title}</h1>
 			<MDXRemote {...post.source} components={{ Image }} />
-		</>
+		</Default>
 	);
 }
 
@@ -27,10 +31,12 @@ export async function getStaticProps({ params }) {
 
 	const { content, meta } = getPostFromSlug(slug);
 
+	// Adicionar mais linguagens neste objeto pode ser feito ao importar mais coisas do highlight.js
 	const languages = {
 		elixir: elixir,
 	};
 
+	// Processa o markdown para HTML e executa alguns plugins
 	const mdxSource = await serialize(content, {
 		mdxOptions: {
 			rehypePlugins: [

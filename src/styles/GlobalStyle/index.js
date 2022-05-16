@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+// Estilos globais como valores padrões e variáveis CSS globais
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
