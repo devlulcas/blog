@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^17.0.34
   eslint: 8.15.0
   eslint-config-next: 12.1.6
   eslint-config-prettier: ^8.5.0
@@ -33,6 +34,7 @@ dependencies:
   styled-components: 5.3.5_ef5jwxihqo6n7gxfmzogljlgcm
 
 devDependencies:
+  '@types/node': 17.0.34
   eslint: 8.15.0
   eslint-config-next: 12.1.6_eslint@8.15.0+next@12.1.6
   eslint-config-prettier: 8.5.0_eslint@8.15.0
@@ -476,6 +478,10 @@ packages:
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: false
+
+  /@types/node/17.0.34:
+    resolution: {integrity: sha512-XImEz7XwTvDBtzlTnm8YvMqGW/ErMWBsKZ+hMTvnDIjGCKxwK5Xpc+c/oQjOauwq8M4OS11hEkpjX8rrI/eEgA==}
+    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
