@@ -1,13 +1,13 @@
-import Link from "next/link";
 import { PostTag } from "../PostTag";
+import { TagsListContainer } from "./styles";
 
 function TagsList({ tags }) {
 	return (
-		<p>
+		<TagsListContainer>
 			{tags.map((tag) => (
 				<PostTag key={tag} tag={tag} />
 			))}
-		</p>
+		</TagsListContainer>
 	);
 }
 
