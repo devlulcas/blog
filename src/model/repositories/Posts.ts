@@ -1,5 +1,5 @@
-import path from "path";
-import fs from "fs";
+import path from "node:path";
+import fs from "node:fs";
 import { sync } from "glob";
 import matter from "gray-matter";
 import { Post } from "../entity/Post";
@@ -9,18 +9,14 @@ const POSTS_PATH = path.join(process.cwd(), "/posts");
 
 /**
  * Obtém um array de nomes dos arquivos (posts) para usar como rota
- *
- * >>> projeto/posts/algo_legal.mdx
- * >>> ["algo_legal"]
  */
 function getSlugs() {
-	const paths: string[] = sync(`${POSTS_PATH}/*.mdx`);
+	const paths: string[] = sync(`${POSTS_PATH}/*/index.mdx`);
 
 	return paths.map((path) => {
 		const parts = path.split("/");
-		const filename = parts.at(-1);
-		const [slug, _ext] = filename.split(".");
-		return slug;
+		const foldername = parts.at(-2);
+		return foldername;
 	});
 }
 
@@ -46,7 +42,7 @@ function getAllPosts() {
  * Obtém um post especifico com base no nome (slug)
  */
 function getPostFromSlug(slug: string): Post {
-	const postsPaths = path.join(POSTS_PATH, `${slug}.mdx`);
+	const postsPaths = path.join(POSTS_PATH, `${slug}/index.mdx`);
 
 	const source = fs.readFileSync(postsPaths);
 
@@ -54,11 +50,12 @@ function getPostFromSlug(slug: string): Post {
 	const { content, data } = matter(source);
 
 	return {
-		content,
+		content: content,
 		meta: {
 			slug,
 			excerpt: data.excerpt ?? "",
 			title: data.title ?? slug,
+			thumb: data.thumbnail ?? "",
 			tags: (data.tags ?? []).sort(),
 			date: (data.date ?? new Date()).toString(),
 		},

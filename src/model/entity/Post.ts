@@ -8,6 +8,7 @@ interface PostMeta {
 	excerpt: string;
 	tags: string[];
 	date: string;
+	thumb: string;
 	slug: string;
 }
 
