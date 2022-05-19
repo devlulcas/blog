@@ -14,6 +14,7 @@ specifiers:
   prettier: ^2.6.2
   react: 18.1.0
   react-dom: 18.1.0
+  react-icons: ^4.3.1
   rehype-autolink-headings: ^6.1.1
   rehype-highlight: ^5.0.2
   rehype-slug: ^5.0.1
@@ -28,6 +29,7 @@ dependencies:
   next-sitemap: 2.5.20_next@12.1.6
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
+  react-icons: 4.3.1_react@18.1.0
   rehype-autolink-headings: 6.1.1
   rehype-highlight: 5.0.2
   rehype-slug: 5.0.1
@@ -2622,6 +2624,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.1.0
       scheduler: 0.22.0
+    dev: false
+
+  /react-icons/4.3.1_react@18.1.0:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /react-is/16.13.1:
