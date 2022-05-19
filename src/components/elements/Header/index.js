@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { NavItem, NavItemList } from "./styles";
+import { Logo } from "../Logo";
+import { NavItem, NavItemList, HeaderContainer } from "./styles";
 
 function Header() {
 	return (
-		<header>
+		<HeaderContainer>
+			<Logo />
 			<nav>
 				<NavItemList>
 					<NavItem>
@@ -20,7 +22,7 @@ function Header() {
 					</NavItem>
 				</NavItemList>
 			</nav>
-		</header>
+		</HeaderContainer>
 	);
 }
 

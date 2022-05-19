@@ -1,20 +1,38 @@
 import styled from "styled-components";
 
+const HeaderContainer = styled.ul`
+	background-color: var(--primary-dark);
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	list-style: none;
+	padding: 0.5rem;
+	align-items: center;
+
+	svg {
+		height: 3rem;
+	}
+`;
+
 const NavItemList = styled.ul`
 	background-color: var(--primary-dark);
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	gap: 1rem;
 	list-style: none;
-	padding: 1rem;
+	padding: 0.5rem;
 `;
 
 const NavItem = styled.li`
-	border-radius: 0.5rem;
-	font-size: 2.5rem;
-	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: 800;
+	padding: 0.3rem 0.5rem;
 	background-color: var(--primary-light);
 	color: var(--secondary);
+
+	:hover {
+		font-style: italic;
+	}
 `;
 
-export { NavItem, NavItemList };
+export { NavItem, NavItemList, HeaderContainer };
