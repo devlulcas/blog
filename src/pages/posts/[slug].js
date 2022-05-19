@@ -33,7 +33,7 @@ export async function getStaticProps({ params }) {
 
 	// Adicionar mais linguagens neste objeto pode ser feito ao importar mais coisas do highlight.js
 	const languages = {
-		elixir: elixir,
+		elixir,
 	};
 
 	// Processa o markdown para HTML e executa alguns plugins
