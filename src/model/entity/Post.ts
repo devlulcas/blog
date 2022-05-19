@@ -9,6 +9,7 @@ interface PostMeta {
 	tags: string[];
 	date: string;
 	thumb: string;
+	alt: string;
 	slug: string;
 }
 

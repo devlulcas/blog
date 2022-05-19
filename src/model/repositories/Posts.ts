@@ -56,6 +56,7 @@ function getPostFromSlug(slug: string): Post {
 			excerpt: data.excerpt ?? "",
 			title: data.title ?? slug,
 			thumb: data.thumbnail ?? "",
+			alt: data.alt ?? "imagem",
 			tags: (data.tags ?? []).sort(),
 			date: (data.date ?? new Date()).toString(),
 		},
