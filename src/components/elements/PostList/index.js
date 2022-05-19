@@ -1,12 +1,13 @@
 import { PostPreview } from "../PostPreview";
+import { PostListContainer } from "./styles";
 
 function PostList({ postsMeta }) {
 	return (
-		<ul>
+		<PostListContainer>
 			{postsMeta.map((post) => {
 				return <PostPreview meta={post} key={post.slug} />;
 			})}
-		</ul>
+		</PostListContainer>
 	);
 }
 
