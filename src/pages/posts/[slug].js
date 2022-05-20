@@ -9,6 +9,7 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import elixir from "highlight.js/lib/languages/elixir";
 import { Default } from "../../components/layouts/Default";
+import { BlogPost } from "../../components/elements/BlogPost";
 
 /**
  * Página individual do post do blog
@@ -19,8 +20,10 @@ export default function PostPage({ post }) {
 			<Head>
 				<title>{post.meta.title}</title>
 			</Head>
-			<h1>{post.meta.title}</h1>
-			<MDXRemote {...post.source} components={{ Image }} />
+
+			<BlogPost meta={post.meta}>
+				<MDXRemote {...post.source} components={{ Image }} />
+			</BlogPost>
 		</Default>
 	);
 }
