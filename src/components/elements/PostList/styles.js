@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PostListContainer = styled.ul`
+const PostListContainer = styled.section`
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
