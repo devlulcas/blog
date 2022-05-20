@@ -12,14 +12,15 @@ import {
 } from "./styles";
 
 function PostPreview({ meta }) {
+	const postLink = `/posts/${meta.slug}`;
 	return (
-		<li>
-			<PostPreviewContainer>
-				<Link href={`/posts/${meta.slug}`}>
-					<PostTitle>{meta.title}</PostTitle>
-				</Link>
+		<PostPreviewContainer>
+			<Link href={postLink}>
+				<PostTitle>{meta.title}</PostTitle>
+			</Link>
 
-				<ImagePlaceholder title={meta.alt}>
+			<ImagePlaceholder title={meta.alt}>
+				<Link href={postLink}>
 					<Image
 						alt={meta.alt}
 						src={meta.thumb}
@@ -27,18 +28,18 @@ function PostPreview({ meta }) {
 						height={40}
 						layout={"fixed"}
 					/>
-				</ImagePlaceholder>
+				</Link>
+			</ImagePlaceholder>
 
-				<TagsList tags={meta.tags} />
+			<TagsList tags={meta.tags} />
 
-				<ExcerptContainer>{meta.excerpt}</ExcerptContainer>
+			<ExcerptContainer>{meta.excerpt}</ExcerptContainer>
 
-				<DateContainer title={`Postado em ${meta.date}`}>
-					<BsCalendarDateFill />
-					<time dateTime={meta.date}>{meta.date}</time>
-				</DateContainer>
-			</PostPreviewContainer>
-		</li>
+			<DateContainer title={`Postado em ${meta.date}`}>
+				<BsCalendarDateFill />
+				<time dateTime={meta.date}>{meta.date}</time>
+			</DateContainer>
+		</PostPreviewContainer>
 	);
 }
 
