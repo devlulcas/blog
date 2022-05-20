@@ -6,11 +6,11 @@ const HeaderContainer = styled.ul`
 	justify-content: space-between;
 	gap: 1rem;
 	list-style: none;
-	padding: 0.5rem;
+	padding: 1rem;
 	align-items: center;
 
 	svg {
-		height: 3rem;
+		height: 6rem;
 	}
 `;
 
@@ -24,13 +24,16 @@ const NavItemList = styled.ul`
 `;
 
 const NavItem = styled.li`
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	font-weight: 800;
-	padding: 0.3rem 0.5rem;
-	background-color: var(--primary-light);
+	padding: 1rem 1.5rem;
+	border-radius: 0.5rem;
+	background-color: var(--primary);
 	color: var(--secondary);
 
 	:hover {
+		background-color: var(--primary-light);
+		color: var(--secondary-light);
 		font-style: italic;
 	}
 `;
