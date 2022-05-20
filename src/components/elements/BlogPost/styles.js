@@ -9,10 +9,15 @@ const Wrapper = styled.div`
 const BlogPostContainer = styled.div`
 	color: var(--on-primary-dark);
 	word-wrap: break-word;
-	max-width: 70%;
+	width: 70%;
+	min-height: 100vh;
 	font-size: 2rem;
-	background: var(--primary-dark);
-	padding: 0 4rem;
+	background: var(--primary);
+	border: 0.2rem solid var(--secondary);
+	border-top: none;
+	border-bottom: none;
+	padding: 0 5rem;
+	font-family: "Fira Code", monospace;
 
 	code {
 		font-family: "Fira Code", monospace;
@@ -26,7 +31,6 @@ const BlogPostContainer = styled.div`
 
 	p {
 		margin-top: 0.8rem;
-		line-height: 2.4rem;
 	}
 
 	h1,
@@ -80,6 +84,12 @@ const BlogPostContainer = styled.div`
 	b,
 	strong {
 		color: var(--special);
+	}
+
+	p:has(img) {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
 	}
 
 	.post-data {
