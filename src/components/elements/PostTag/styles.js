@@ -6,10 +6,14 @@ const TagContainer = styled.span`
 	color: var(--on-secondary);
 	border-radius: 5rem;
 	font-weight: 600;
+	font-size: 1.8rem;
+
 	cursor: pointer;
 
 	:hover {
 		background-color: var(--secondary-light);
+		outline: 0.1rem solid var(--special);
+		outline-offset: 0.3rem;
 	}
 `;
 
