@@ -19,8 +19,8 @@ function PostPreview({ meta }) {
 				<PostTitle>{meta.title}</PostTitle>
 			</Link>
 
-			<ImagePlaceholder title={meta.alt}>
-				<Link href={postLink}>
+			<Link href={postLink}>
+				<ImagePlaceholder title={meta.alt}>
 					<Image
 						alt={meta.alt}
 						src={meta.thumb}
@@ -28,8 +28,8 @@ function PostPreview({ meta }) {
 						height={40}
 						layout={"fixed"}
 					/>
-				</Link>
-			</ImagePlaceholder>
+				</ImagePlaceholder>
+			</Link>
 
 			<TagsList tags={meta.tags} />
 
