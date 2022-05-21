@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { BsTagFill } from "react-icons/bs";
 import { PostList } from "../../components/elements/PostList";
 import { Default } from "../../components/layouts/Default";
 import { getAllPosts } from "../../model/repositories/Posts.ts";
@@ -10,8 +11,11 @@ export default function TagPage({ slug, postsMeta }) {
 				<title>Tag : {slug}</title>
 			</Head>
 
-			<h1>Tag : {slug}</h1>
-			<PostList postsMeta={postsMeta} />
+			<PostList
+				postsMeta={postsMeta}
+				title={`Tag : ${slug}`}
+				icon={<BsTagFill />}
+			/>
 		</Default>
 	);
 }
