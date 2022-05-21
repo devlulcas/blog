@@ -86,12 +86,6 @@ const BlogPostContainer = styled.div`
 		color: var(--special);
 	}
 
-	p:has(img) {
-		display: flex !important;
-		align-items: center !important;
-		justify-content: center !important;
-	}
-
 	.post-data {
 		font-family: "Fira Code", monospace;
 		padding: 1rem;
