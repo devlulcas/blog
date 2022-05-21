@@ -16,6 +16,7 @@ const PostPreviewContainer = styled.article`
 const ImagePlaceholder = styled.div`
 	display: flex;
 	cursor: pointer;
+	position: relative;
 	align-items: center;
 	justify-content: center;
 	min-height: 10rem;
@@ -29,6 +30,13 @@ const ImagePlaceholder = styled.div`
 	:hover {
 		outline: 0.1rem solid var(--special);
 		outline-offset: 0.3rem;
+	}
+
+	div {
+		border: 1rem solid var(--primary-light);
+		position: relative;
+		width: 100%;
+		height: 100%;
 	}
 `;
 
