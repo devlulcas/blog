@@ -10,7 +10,7 @@ const PostPreviewContainer = styled.article`
 	border-radius: 1rem;
 	box-shadow: 0.5rem 0.5rem 0rem var(--primary-dark);
 	border: 0.2rem solid var(--secondary);
-	width: 50rem;
+	width: 100%;
 `;
 
 const ImagePlaceholder = styled.div`

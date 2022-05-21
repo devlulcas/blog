@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 const PostListContainer = styled.section`
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
 	gap: 2rem;
 	list-style: none;
-	justify-content: space-between;
 	padding: 1rem 3rem;
+	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 `;
 
 export { PostListContainer };

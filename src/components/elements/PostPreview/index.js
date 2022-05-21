@@ -21,13 +21,7 @@ function PostPreview({ meta }) {
 
 			<Link href={postLink}>
 				<ImagePlaceholder title={meta.alt}>
-					<Image
-						alt={meta.alt}
-						src={meta.thumb}
-						width={40}
-						height={40}
-						layout={"fixed"}
-					/>
+					<Image alt={meta.alt} src={meta.thumb} width={100} height={100} />
 				</ImagePlaceholder>
 			</Link>
 
