@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { BsCalendarDateFill, BsFillStarFill } from "react-icons/bs";
+import { Banner } from "../components/elements/Banner";
 import { PostList } from "../components/elements/PostList";
 import { Default } from "../components/layouts/Default";
 import { getAllPosts } from "../model/repositories/Posts.ts";
@@ -13,16 +15,29 @@ import { getAllPosts } from "../model/repositories/Posts.ts";
  *
  * Esse componente deve ser exportado por padrão por estar em /pages
  */
-export default function Home({ postsMeta }) {
+export default function Home({ postsMeta, favorites, allTags }) {
 	return (
 		<Default>
 			<div>
 				<Head>
-					<title>Devlulcas blog</title>
+					<title>👋 devlulcas blog</title>
 					<meta name="description" content="A cool blog" />
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<PostList postsMeta={postsMeta} />
+
+				<Banner tags={allTags} />
+
+				<PostList
+					postsMeta={favorites}
+					title="Publicações preferidas"
+					icon={<BsFillStarFill />}
+				/>
+
+				<PostList
+					postsMeta={postsMeta}
+					title="Publicações mais recentes"
+					icon={<BsCalendarDateFill />}
+				/>
 			</div>
 		</Default>
 	);
@@ -42,10 +57,25 @@ export default function Home({ postsMeta }) {
  */
 export async function getStaticProps() {
 	const posts = getAllPosts();
-	const postsToShow = posts.slice(0, 9);
-	const postsMeta = postsToShow.map((post) => post.meta);
+	const postsMetaFromAll = posts.map((post) => post.meta);
+
+	// Todas as tags
+	let allTags = [];
+
+	postsMetaFromAll.map((post) => {
+		allTags = [...allTags, ...post.tags];
+	});
+
+	// Últimos dez posts
+	const postsMeta = postsMetaFromAll.slice(0, 9);
+
+	// Posts favoritos do autor
+	const favoritePosts = ["Convenções de commits"];
+	const favorites = postsMetaFromAll.filter((post) =>
+		favoritePosts.includes(post.title),
+	);
 
 	return {
-		props: { postsMeta },
+		props: { postsMeta, favorites, allTags },
 	};
 }
