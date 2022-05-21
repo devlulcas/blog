@@ -66,8 +66,9 @@ export async function getStaticProps() {
 		allTags = [...allTags, ...post.tags];
 	});
 
-	allTags = new Set(...allTags);
+	allTags = new Set(allTags);
 
+	allTags = Array.from(allTags);
 	// Últimos dez posts
 	const postsMeta = postsMetaFromAll.slice(0, 9);
 
