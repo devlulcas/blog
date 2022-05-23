@@ -19,6 +19,13 @@ const BlogPostContainer = styled.div`
 	padding: 0 5rem;
 	font-family: "Fira Code", monospace;
 
+	@media screen and (max-width: 40rem) {
+		margin: 0rem;
+		padding: 0 3rem;
+		border-radius: 0;
+		width: 100%;
+	}
+
 	code {
 		font-family: "Fira Code", monospace;
 		border-radius: 0.5rem;

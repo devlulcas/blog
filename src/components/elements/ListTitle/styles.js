@@ -11,6 +11,12 @@ const ListTitleContainer = styled.h2`
 	width: fit-content;
 	border-radius: 1rem;
 	margin: 2rem 0rem 1rem 3rem;
+
+	@media screen and (max-width: 40rem) {
+		margin: 0rem;
+		border-radius: 0;
+		width: 100%;
+	}
 `;
 
 export { ListTitleContainer };
