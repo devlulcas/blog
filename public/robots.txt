@@ -1,9 +1,9 @@
 # *
 User-agent: *
-Allow: /
+Allow: /*
 
 # Host
-Host: localhost:3000/
+Host: https://blog-devlulcas.vercel.app/
 
 # Sitemaps
-Sitemap: localhost:3000/sitemap.xml
+Sitemap: https://blog-devlulcas.vercel.app/sitemap.xml
