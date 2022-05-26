@@ -1,9 +1,9 @@
-const siteUrl = "localhost:3000/";
+const siteUrl = "https://blog-devlulcas.vercel.app/";
 
 module.exports = {
 	siteUrl,
 	generateRobotsTxt: true,
 	robotsTxtOptions: {
-		policies: [{ userAgent: "*", allow: "/" }],
+		policies: [{ userAgent: "*", allow: "*" }],
 	},
 };
