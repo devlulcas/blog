@@ -3,24 +3,18 @@ import Link from "next/link";
 import { TagsList } from "../TagsList";
 import { BsCalendarDateFill } from "react-icons/bs";
 
-import {
-	ImagePlaceholder,
-	DateContainer,
-	PostPreviewContainer,
-	PostTitle,
-	ExcerptContainer,
-} from "./styles";
+import styles from "./styles.module.css";
 
 function PostPreview({ meta }) {
 	const postLink = `/posts/${meta.slug}`;
 	return (
-		<PostPreviewContainer>
+		<article className={styles.previewContainer}>
 			<Link href={postLink}>
-				<PostTitle>{meta.title}</PostTitle>
+				<h3 className={styles.postTitle}>{meta.title}</h3>
 			</Link>
 
 			<Link href={postLink}>
-				<ImagePlaceholder title={meta.alt}>
+				<picture title={meta.alt} className={styles.imagePlaceholder}>
 					<div>
 						<Image
 							alt={meta.alt}
@@ -29,18 +23,18 @@ function PostPreview({ meta }) {
 							layout="fill"
 						/>
 					</div>
-				</ImagePlaceholder>
+				</picture>
 			</Link>
 
 			<TagsList tags={meta.tags} />
 
-			<ExcerptContainer>{meta.excerpt}</ExcerptContainer>
+			<p className={styles.excerptContainer}>{meta.excerpt}</p>
 
-			<DateContainer title={`Postado em ${meta.date}`}>
+			<div className={styles.dateContainer} title={`Postado em ${meta.date}`}>
 				<BsCalendarDateFill />
 				<time dateTime={meta.date}>{meta.date}</time>
-			</DateContainer>
-		</PostPreviewContainer>
+			</div>
+		</article>
 	);
 }
 

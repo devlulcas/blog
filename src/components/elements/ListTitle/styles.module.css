@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-const ListTitleContainer = styled.h2`
+.listTitleContainer {
 	padding: 1rem 3rem;
 	display: flex;
 	align-items: center;
@@ -12,11 +10,9 @@ const ListTitleContainer = styled.h2`
 	border-radius: 1rem;
 	margin: 2rem 0rem 1rem 3rem;
 
-	@media screen and (max-width: 40rem) {
+	& @media screen and (max-width: 40rem) {
 		margin: 0rem;
 		border-radius: 0;
 		width: 100%;
 	}
-`;
-
-export { ListTitleContainer };
+}

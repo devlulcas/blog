@@ -1,13 +1,13 @@
 import { PostTag } from "../PostTag";
-import { TagsListContainer } from "./styles";
+import styles from "./styles.module.css";
 
 function TagsList({ tags }) {
 	return (
-		<TagsListContainer>
+		<p className={styles.tagsContainer}>
 			{tags.map((tag) => (
 				<PostTag key={tag} tag={tag} />
 			))}
-		</TagsListContainer>
+		</p>
 	);
 }
 

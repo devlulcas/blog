@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-const HeaderContainer = styled.header`
+.headerContainer {
 	background-color: var(--primary-dark);
 	display: flex;
 	justify-content: space-between;
@@ -10,16 +8,16 @@ const HeaderContainer = styled.header`
 	padding: 1rem;
 	align-items: center;
 
-	svg {
+	& svg {
 		height: 6rem;
 
-		@media screen and (max-width: 40rem) {
+		& @media screen and (max-width: 40rem) {
 			width: 100%;
 		}
 	}
-`;
+}
 
-const NavItemList = styled.ul`
+.navItemList {
 	background-color: var(--primary-dark);
 	display: flex;
 	flex-wrap: wrap;
@@ -28,12 +26,12 @@ const NavItemList = styled.ul`
 	list-style: none;
 	padding: 0.5rem;
 
-	@media screen and (max-width: 40rem) {
+	& @media screen and (max-width: 40rem) {
 		justify-content: center;
 	}
-`;
+}
 
-const NavItem = styled.li`
+.navItem {
 	font-size: 2.5rem;
 	font-weight: 800;
 	padding: 1rem 1.5rem;
@@ -41,16 +39,14 @@ const NavItem = styled.li`
 	background-color: var(--primary);
 	color: var(--secondary);
 
-	@media screen and (max-width: 40rem) {
+	& @media screen and (max-width: 40rem) {
 		flex-grow: 3;
 		text-align: center;
 	}
 
-	:hover {
+	&:hover {
 		background-color: var(--primary-light);
 		color: var(--secondary-light);
 		font-style: italic;
 	}
-`;
-
-export { NavItem, NavItemList, HeaderContainer };
+}

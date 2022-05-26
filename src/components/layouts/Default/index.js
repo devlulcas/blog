@@ -1,5 +1,5 @@
 import { Header } from "../../elements/Header";
-import { Container } from "./styles";
+import styles from "./styles.module.css";
 
 /**
  * Layout básico para múltiplas rotas.
@@ -7,10 +7,10 @@ import { Container } from "./styles";
  */
 function Default({ children }) {
 	return (
-		<Container>
+		<div className={styles.container}>
 			<Header />
 			{children}
-		</Container>
+		</div>
 	);
 }
 

@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-const PostPreviewContainer = styled.article`
+.previewContainer {
 	padding: 2rem;
 	min-height: 40rem;
 	display: flex;
@@ -11,9 +9,9 @@ const PostPreviewContainer = styled.article`
 	box-shadow: 0.5rem 0.5rem 0rem var(--primary-dark);
 	border: 0.2rem solid var(--secondary);
 	width: 100%;
-`;
+}
 
-const ImagePlaceholder = styled.div`
+.imagePlaceholder {
 	display: flex;
 	cursor: pointer;
 	position: relative;
@@ -27,20 +25,20 @@ const ImagePlaceholder = styled.div`
 	overflow: hidden;
 	box-shadow: 0.2rem 0.2rem 0rem var(--primary-dark);
 
-	:hover {
+	&:hover {
 		outline: 0.1rem solid var(--special);
 		outline-offset: 0.3rem;
 	}
 
-	div {
+	& div {
 		border: 1rem solid var(--primary-light);
 		position: relative;
 		width: 100%;
 		height: 100%;
 	}
-`;
+}
 
-const PostTitle = styled.h2`
+.postTitle {
 	color: var(--on-secondary);
 	width: fit-content;
 	padding: 0.3ch 1ch;
@@ -49,19 +47,19 @@ const PostTitle = styled.h2`
 	background: var(--secondary);
 	cursor: pointer;
 
-	:hover {
+	&:hover {
 		background-color: var(--secondary-light);
 	}
-`;
+}
 
-const ExcerptContainer = styled.p`
+.excerptContainer {
 	color: var(--on-primary);
 	padding: 1ch 1ch;
 	font-size: 1.8rem;
 	font-weight: 600;
-`;
+}
 
-const DateContainer = styled.div`
+.dateContainer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -73,12 +71,4 @@ const DateContainer = styled.div`
 	margin-left: 1ch;
 	font-weight: 800;
 	background: var(--secondary);
-`;
-
-export {
-	PostPreviewContainer,
-	DateContainer,
-	ExcerptContainer,
-	ImagePlaceholder,
-	PostTitle,
-};
+}

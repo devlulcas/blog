@@ -1,19 +1,19 @@
 import Link from "next/link";
 import { Logo } from "../Logo";
-import { NavItem, NavItemList, HeaderContainer } from "./styles";
+import styles from "./styles.module.css";
 
 function Header() {
 	return (
-		<HeaderContainer>
+		<header className={styles.headerContainer}>
 			<Logo />
 			<nav>
-				<NavItemList>
-					<NavItem>
+				<ul className={styles.navItemList}>
+					<li className={styles.navItem}>
 						<Link href="/">/home</Link>
-					</NavItem>
-				</NavItemList>
+					</li>
+				</ul>
 			</nav>
-		</HeaderContainer>
+		</header>
 	);
 }
 

@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { TagContainer } from "./styles";
+import styles from "./styles.module.css";
 
 function PostTag({ tag }) {
 	return (
 		<Link key={tag} href={`/tags/${tag}`}>
-			<TagContainer title={`Tag: ${tag}`}>{tag}</TagContainer>
+			<span className={styles.tagContent} title={`Tag: ${tag}`}>
+				{tag}
+			</span>
 		</Link>
 	);
 }

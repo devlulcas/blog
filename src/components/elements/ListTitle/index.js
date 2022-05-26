@@ -1,11 +1,11 @@
-import { ListTitleContainer } from "./styles";
+import styles from "./styles.module.css";
 
 function ListTitle({ title, icon }) {
 	return (
-		<ListTitleContainer>
+		<h2 className={styles.listTitleContainer}>
 			{icon}
 			{title}
-		</ListTitleContainer>
+		</h2>
 	);
 }
 

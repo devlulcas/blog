@@ -1,9 +1,11 @@
 import Link from "next/link";
+import styles from "./styles.module.css";
 
 function Logo() {
 	return (
-		<Link href="/" style={{ cursor: "pointer" }}>
+		<Link href="/">
 			<svg
+				className={styles.logo}
 				width="151"
 				height="165"
 				viewBox="0 0 151 165"
