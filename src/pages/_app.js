@@ -1,4 +1,4 @@
-import { GlobalStyle } from "../styles/GlobalStyle";
+import "../styles/GlobalStyle/index.css";
 import "../styles/highlight.css";
 
 /**
@@ -7,7 +7,6 @@ import "../styles/highlight.css";
 export default function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<GlobalStyle />
 			<Component {...pageProps} />
 		</>
 	);
