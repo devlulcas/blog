@@ -11,6 +11,10 @@ function Header() {
 					<li className={styles.navItem}>
 						<Link href="/">/home</Link>
 					</li>
+
+					<li className={styles.navItem}>
+						<Link href="/posts">/posts</Link>
+					</li>
 				</ul>
 			</nav>
 		</header>
