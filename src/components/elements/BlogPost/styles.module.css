@@ -90,16 +90,16 @@
 	& strong {
 		color: var(--special);
 	}
+}
 
-	& .post-data {
-		font-family: "Fira Code", monospace;
-		padding: 1rem;
-		background-color: var(--primary);
-		text-align: center;
+.postData {
+	font-family: "Fira Code", monospace;
+	padding: 1rem;
+	background-color: var(--primary);
+	text-align: center;
 
-		& time,
-		& .author {
-			color: var(--secondary);
-		}
+	& time,
+	& .author {
+		color: var(--secondary);
 	}
 }

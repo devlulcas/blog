@@ -5,10 +5,10 @@ function BlogPost({ children, meta }) {
 		<div className={styles.wrapper}>
 			<article className={styles.blogPostContainer}>
 				{children}
-				<footer className="post-data">
+				<p className={styles.postData}>
 					Publicado em <time dateTime={meta.date}>{meta.date}</time> por{" "}
 					<span className="author">Lucas Alves Rego</span>
-				</footer>
+				</p>
 			</article>
 		</div>
 	);
