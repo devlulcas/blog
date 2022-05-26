@@ -1,0 +1,77 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem;
+	border-top: 0.2rem solid salmon;
+	margin-top: 5rem;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.date {
+	font-family: "Fira Code", monospace;
+	padding: 1rem;
+	background-color: var(--primary);
+	text-align: center;
+
+	& time {
+		color: var(--secondary);
+		border: 0.1rem solid var(--secondary);
+		padding: 0.5rem;
+		border-radius: 1rem;
+		animation: neon-flicker 1s infinite alternate;
+	}
+}
+
+.legend {
+	color: var(--secondary);
+}
+
+@keyframes neon-flicker {
+	0%,
+	10%,
+	21%,
+	23%,
+	25%,
+	54%,
+	56%,
+	100% {
+		text-shadow: -0.02em -0.05em 10em #ffffff, -0.02em -0.05em 5em #ffffff,
+			0 0 0.3em var(--secondary), 0 0 1em var(--secondary),
+			0 0 1em var(--secondary), 0 0 3em var(--secondary),
+			0 0 2em var(--secondary);
+	}
+
+	20%,
+	24%,
+	55% {
+		text-shadow: none;
+	}
+}
+
+.contact {
+	display: flex;
+	gap: 2rem;
+}
+
+.link {
+	cursor: pointer;
+	border-bottom: 0.2rem dotted var(--secondary);
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	gap: 1rem;
+
+	&:hover {
+		& svg {
+			color: var(--secondary);
+		}
+		border-color: var(--on-primary);
+	}
+}

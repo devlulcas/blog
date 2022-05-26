@@ -77,7 +77,7 @@
 
 		& li {
 			padding-left: 1rem;
-			& ::marker {
+			&::marker {
 				content: "->";
 				font-weight: 800;
 				font-size: 1.8rem;
@@ -89,17 +89,5 @@
 	& b,
 	& strong {
 		color: var(--special);
-	}
-}
-
-.postData {
-	font-family: "Fira Code", monospace;
-	padding: 1rem;
-	background-color: var(--primary);
-	text-align: center;
-
-	& time,
-	& .author {
-		color: var(--secondary);
 	}
 }
