@@ -2,6 +2,6 @@
 	display: grid;
 	gap: 2rem;
 	list-style: none;
-	padding: 1rem 3rem;
+	padding: 1rem 3rem 3rem 3rem;
 	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 }

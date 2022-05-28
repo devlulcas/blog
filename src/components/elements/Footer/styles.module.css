@@ -1,0 +1,38 @@
+.footer {
+	padding: 2rem;
+	border-top: 0.5rem solid var(--secondary);
+	background-color: var(--primary);
+	color: var(--on-primary);
+	font-size: 1.5rem;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.contact {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	gap: 2rem;
+}
+
+.link {
+	cursor: pointer;
+	border-bottom: 0.2rem dotted var(--secondary);
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	gap: 1rem;
+	font-size: 2rem;
+
+	&:hover {
+		& svg {
+			color: var(--secondary);
+		}
+
+		border-color: var(--on-primary);
+	}
+}
