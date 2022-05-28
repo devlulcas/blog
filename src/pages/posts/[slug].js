@@ -11,21 +11,25 @@ import elixir from "highlight.js/lib/languages/elixir";
 import { Default } from "../../components/layouts/Default";
 import { BlogPost } from "../../components/elements/BlogPost";
 import { Pic } from "../../components/elements/Pic";
+import { BackToTop } from "../../components/elements/BackToTop";
 
 /**
  * Página individual do post do blog
  */
 export default function PostPage({ post }) {
 	return (
-		<Default>
-			<Head>
-				<title>{post.meta.title}</title>
-			</Head>
+		<>
+			<Default>
+				<Head>
+					<title>{post.meta.title}</title>
+				</Head>
 
-			<BlogPost meta={post.meta}>
-				<MDXRemote {...post.source} components={{ Image, Pic }} />
-			</BlogPost>
-		</Default>
+				<BlogPost meta={post.meta}>
+					<MDXRemote {...post.source} components={{ Image, Pic }} />
+				</BlogPost>
+			</Default>
+			<BackToTop />
+		</>
 	);
 }
 

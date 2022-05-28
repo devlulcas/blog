@@ -1,0 +1,31 @@
+.button {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	padding: 1rem;
+	font-family: "Inter", sans-serif;
+	font-weight: 600;
+	border: 0.2rem solid var(--secondary);
+	background-color: var(--primary);
+	color: var(--secondary);
+	border-radius: 1rem;
+
+	&:hover {
+		transform: scale(1.05);
+		outline: 0.2rem solid var(--secondary);
+		outline-offset: 0.2rem;
+	}
+
+	@media screen and (max-width: 100rem) {
+		width: 10rem;
+	}
+
+	@media screen and (max-width: 70rem) {
+		width: 7rem;
+	}
+}
