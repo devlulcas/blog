@@ -18,7 +18,7 @@ import { getAllPosts } from "../model/repositories/Posts.ts";
 export default function Home({ postsMeta, favorites, allTags }) {
 	return (
 		<Default>
-			<div>
+			<main>
 				<Head>
 					<title>👋 devlulcas blog</title>
 					<meta name="description" content="A cool blog" />
@@ -28,17 +28,17 @@ export default function Home({ postsMeta, favorites, allTags }) {
 				<Banner tags={allTags} />
 
 				<PostList
-					postsMeta={favorites}
-					title="Publicações preferidas"
-					icon={<BsFillStarFill />}
-				/>
-
-				<PostList
 					postsMeta={postsMeta}
 					title="Publicações mais recentes"
 					icon={<BsCalendarDateFill />}
 				/>
-			</div>
+
+				<PostList
+					postsMeta={favorites}
+					title="Publicações preferidas"
+					icon={<BsFillStarFill />}
+				/>
+			</main>
 		</Default>
 	);
 }
