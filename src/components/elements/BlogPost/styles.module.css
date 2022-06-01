@@ -5,6 +5,9 @@
 }
 
 .blogPostContainer {
+	--list-item: #fac25b;
+	--blockquote: #fffff5;
+
 	color: var(--on-primary-dark);
 	word-wrap: break-word;
 	width: 70%;
@@ -16,6 +19,7 @@
 	border-bottom: none;
 	padding: 0 5rem;
 	font-family: "Fira Code", monospace;
+	line-height: 1.5em;
 
 	@media screen and (max-width: 40rem) {
 		margin: 0rem;
@@ -26,16 +30,13 @@
 
 	& code {
 		font-family: "Fira Code", monospace;
-		border-radius: 0.5rem;
-	}
-
-	& code.hljs {
-		padding: 1rem;
-		margin: 1rem;
+		border-radius: 0.2rem;
+		padding: 0 1rem;
+		background-color: #282a36;
 	}
 
 	& p {
-		margin-top: 0.8rem;
+		margin: 0.75rem 0;
 	}
 
 	& h1,
@@ -76,7 +77,10 @@
 		text-indent: 0rem;
 
 		& li {
+			padding-top: 3rem;
 			padding-left: 1rem;
+			color: var(--list-item);
+
 			&::marker {
 				content: "->";
 				font-weight: 800;
@@ -89,5 +93,16 @@
 	& b,
 	& strong {
 		color: var(--special);
+	}
+
+	& em,
+	& i {
+		font-style: italic;
+	}
+
+	& blockquote {
+		font-style: italic;
+		color: var(--blockquote);
+		margin-left: 0.5rem;
 	}
 }
