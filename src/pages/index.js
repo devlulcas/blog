@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { BsCalendarDateFill, BsFillStarFill } from "react-icons/bs";
 import { Banner } from "../components/elements/Banner";
+import { Footer } from "../components/elements/Footer";
 import { PostList } from "../components/elements/PostList";
 import { Default } from "../components/layouts/Default";
 import { getAllPosts } from "../model/repositories/Posts.ts";
@@ -17,29 +18,33 @@ import { getAllPosts } from "../model/repositories/Posts.ts";
  */
 export default function Home({ postsMeta, favorites, allTags }) {
 	return (
-		<Default>
-			<main>
-				<Head>
-					<title>👋 devlulcas blog</title>
-					<meta name="description" content="A cool blog" />
-					<link rel="icon" href="/favicon.ico" />
-				</Head>
+		<>
+			<Default>
+				<main>
+					<Head>
+						<title>👋 devlulcas blog</title>
+						<meta name="description" content="A cool blog" />
+						<link rel="icon" href="/favicon.ico" />
+					</Head>
 
-				<Banner tags={allTags} />
+					<Banner tags={allTags} />
 
-				<PostList
-					postsMeta={postsMeta}
-					title="Publicações mais recentes"
-					icon={<BsCalendarDateFill />}
-				/>
+					<PostList
+						postsMeta={postsMeta}
+						title="Publicações mais recentes"
+						icon={<BsCalendarDateFill />}
+					/>
 
-				<PostList
-					postsMeta={favorites}
-					title="Publicações preferidas"
-					icon={<BsFillStarFill />}
-				/>
-			</main>
-		</Default>
+					<PostList
+						postsMeta={favorites}
+						title="Publicações preferidas"
+						icon={<BsFillStarFill />}
+					/>
+				</main>
+			</Default>
+
+			<Footer />
+		</>
 	);
 }
 

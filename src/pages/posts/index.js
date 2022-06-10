@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { BsCalendarDateFill, BsFillStarFill } from "react-icons/bs";
 import { Banner } from "../../components/elements/Banner";
+import { Footer } from "../../components/elements/Footer";
 import { PostList } from "../../components/elements/PostList";
 import { Default } from "../../components/layouts/Default";
 import { getAllPosts } from "../../model/repositories/Posts.ts";
@@ -17,22 +18,25 @@ import { getAllPosts } from "../../model/repositories/Posts.ts";
  */
 export default function Home({ postsMeta, allTags }) {
 	return (
-		<Default>
-			<div>
-				<Head>
-					<title>Todos os posts</title>
-					<meta name="description" content="A cool blog" />
-				</Head>
+		<>
+			<Default>
+				<div>
+					<Head>
+						<title>Todos os posts</title>
+						<meta name="description" content="A cool blog" />
+					</Head>
 
-				<Banner tags={allTags} />
+					<Banner tags={allTags} />
 
-				<PostList
-					postsMeta={postsMeta}
-					title="Todas as publicações"
-					icon={<BsCalendarDateFill />}
-				/>
-			</div>
-		</Default>
+					<PostList
+						postsMeta={postsMeta}
+						title="Todas as publicações"
+						icon={<BsCalendarDateFill />}
+					/>
+				</div>
+			</Default>
+			<Footer />
+		</>
 	);
 }
 
