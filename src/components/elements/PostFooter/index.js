@@ -8,7 +8,9 @@ function PostFooter({ meta }) {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.container}>
-				<Image src={logo} alt="logo devlulcas" />
+				<div className={styles.logo}>
+					<Image src={logo} alt="logo devlulcas" />
+				</div>
 
 				<div className={styles.data}>
 					<p>
