@@ -36,7 +36,7 @@
 	}
 
 	& p {
-		margin: 0.75rem 0;
+		margin: 2rem 0;
 	}
 
 	& h1,
@@ -103,6 +103,13 @@
 	& blockquote {
 		font-style: italic;
 		color: var(--blockquote);
-		margin-left: 0.5rem;
+		margin-left: 0.1rem;
+		padding-left: 1rem;
+		border-left: var(--secondary-light) 0.5rem solid;
+		quotes: none;
+
+		& p {
+			display: inline;
+		}
 	}
 }
