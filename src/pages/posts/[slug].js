@@ -18,7 +18,6 @@ import { NextSeo } from "next-seo";
  * Página individual do post do blog
  */
 export default function PostPage({ post }) {
-	console.log(post);
 	return (
 		<>
 			<Default>
