@@ -12,17 +12,42 @@ import { Default } from "../../components/layouts/Default";
 import { BlogPost } from "../../components/elements/BlogPost";
 import { Pic } from "../../components/elements/Pic";
 import { BackToTop } from "../../components/elements/BackToTop";
+import { NextSeo } from "next-seo";
 
 /**
  * Página individual do post do blog
  */
 export default function PostPage({ post }) {
+	console.log(post);
 	return (
 		<>
 			<Default>
-				<Head>
-					<title>{post.meta.title}</title>
-				</Head>
+				<NextSeo
+					title={post.meta.title}
+					description={post.meta.excerpt}
+					openGraph={{
+						url: post.url,
+						title: post.meta.title,
+						description: post.meta.excerpt,
+						images: [
+							{
+								url: post.host + post.meta.thumb,
+								width: 800,
+								height: 600,
+								alt: post.meta.auth,
+								type: "image/jpeg",
+							},
+							{ url: post.host + post.meta.thumb },
+							{ url: post.host + post.meta.thumb },
+						],
+						site_name: "Devlulcas Blog",
+					}}
+					twitter={{
+						handle: "@lucaehooo",
+						site: "@lucaehooo",
+						cardType: "summary_large_image",
+					}}
+				/>
 
 				<BlogPost meta={post.meta}>
 					<MDXRemote {...post.source} components={{ Image, Pic }} />
@@ -55,7 +80,10 @@ export async function getStaticProps({ params }) {
 		},
 	});
 
-	return { props: { post: { source: mdxSource, meta } } };
+	const host = process.env["HOST"];
+	const url = host + "/posts/" + slug;
+
+	return { props: { post: { source: mdxSource, meta, url, host } } };
 }
 
 // Quando o getStaticProps pode retornar conteúdo dinâmico é necessário um getStaticPaths
