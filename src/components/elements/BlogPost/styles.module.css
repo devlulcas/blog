@@ -31,12 +31,17 @@
 	& code {
 		font-family: "Fira Code", monospace;
 		border-radius: 0.2rem;
-		padding: 0 1rem;
+		padding: 1 1rem;
 		background-color: #282a36;
 	}
 
 	& p {
 		margin: 2rem 0;
+	}
+
+	& a {
+		color: orange;
+		border-bottom: 0.1rem dotted orange;
 	}
 
 	& h1,
@@ -46,7 +51,16 @@
 	& h5,
 	& h6 {
 		color: var(--secondary);
-		margin-top: 1.5rem;
+		margin: 3rem 0 1.5rem 0;
+
+		&::before {
+			content: "# ";
+		}
+
+		& a {
+			color: orange;
+			border-bottom: none;
+		}
 	}
 
 	& h1 {
@@ -65,11 +79,11 @@
 	}
 
 	& h4 {
-		font-size: 2.2rem;
+		font-size: 2rem;
 	}
 
 	& h5 {
-		font-size: 2.1rem;
+		font-size: 1.8rem;
 	}
 
 	& ul {
@@ -77,12 +91,12 @@
 		text-indent: 0rem;
 
 		& li {
-			padding-top: 3rem;
+			padding-top: 0rem;
 			padding-left: 1rem;
 			color: var(--list-item);
 
 			&::marker {
-				content: "->";
+				content: "-";
 				font-weight: 800;
 				font-size: 1.8rem;
 				font-family: "Fira Code", monospace;
