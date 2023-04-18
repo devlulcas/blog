@@ -1,0 +1,33 @@
+.redirectWarning {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding: 1rem;
+	background-color: var(--secondary);
+	color: var(--on-secondary);
+}
+
+.content {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.link {
+	margin-left: 1rem;
+	text-decoration: none;
+	font-weight: 800;
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0.25;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.25;
+	}
+}

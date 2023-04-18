@@ -80,6 +80,7 @@ export async function getStaticProps({ params }) {
 	});
 
 	const host = process.env["HOST"];
+
 	const url = host + "/posts/" + slug;
 
 	return { props: { post: { source: mdxSource, meta, url, host } } };

@@ -10,14 +10,17 @@ const POSTS_PATH = path.join(process.cwd(), "/posts");
 /**
  * Obtém um array de nomes dos arquivos (posts) para usar como rota
  */
-function getSlugs() {
+function getSlugs(): string[] {
 	const paths: string[] = sync(`${POSTS_PATH}/*/index.mdx`);
 
-	return paths.map((path) => {
+	const slugs = paths.map((path) => {
 		const parts = path.split("/");
 		const foldername = parts.at(-2);
 		return foldername;
 	});
+
+	// TS não consegue inferir que o filter não vai retornar undefined
+	return slugs.filter(Boolean) as string[];
 }
 
 /**

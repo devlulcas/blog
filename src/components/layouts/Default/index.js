@@ -1,4 +1,5 @@
 import { Header } from "../../elements/Header";
+import { RedirectWarning } from "../../elements/RedirectWarning";
 import styles from "./styles.module.css";
 
 /**
@@ -9,6 +10,7 @@ function Default({ children }) {
 	return (
 		<div className={styles.container}>
 			<Header />
+			<RedirectWarning />
 			{children}
 		</div>
 	);
